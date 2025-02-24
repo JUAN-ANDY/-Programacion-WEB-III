@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layouts en HTML</title>
+    <style>
+        /* Estilos para Layout ( 1 ) de una columna */
+        .layout-uno {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+            background-color: cornflowerblue;
+        }
+        .layout-container {
+            margin-bottom: 50px;
+            padding: 20px;
+            background-color: aquamarine;
+        }
+        /* Estilos para Layout (2 ) de dos columnas */
+        .layout-dos {
+            display: flex;
+            background-color: cadetblue;
+        }
+        .layout-dos .main {
+            padding: 20px;
+            background-color: pink;
+        }
+        .layout-dos .sidebar {
+            flex: 1;
+            padding: 20px;
+            background-color: #ddd;
+        }
+        /* Estilos para Layout ( 3 ) de tres columnas */
+        .layout-tres {
+            display: flex;
+        }
+        .layout-tres .sidebar {
+            flex: 1;
+            padding: 30px;
+            background-color: #dddddd;
+        }
+        .layout-tres .main {
+            flex: 2;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        /* Estilos para Layout ( 5 ) Header-Content-Footer */
+        .layout-cuatro .header, .layout-cuatro .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 50px;
+        }
+        .layout-cuatro .content {
+            padding: 100px;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+        /* Estilos para Layout ( 5 ) cinco */
+        .layout-header {
+            background-color: aqua;
+            text-align: center;
+            padding: 20px;
+            font-size: xx-large;
+            font-weight: bold;
+        }
+        .layout-cinco {
+            display: flex;
+        }
+        .sdebar-cinco {
+            width: 20%;
+            background-color: #ddd;
+            padding: 20px;
+        }
+
+        .content-cinco {
+            width: 80%;
+            background-color :burlywood;
+            padding: 20px;
+        }
+        .footer-cinco {
+            width: 100%;
+            background-color: cadetblue;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="layout-container">
+        <h1>N1 Layout de Una Columna</h1>
+        <div class="layout-uno">
+            <p>Este es un diseño de una sola columna. y es utilizado para páginas con mucho texto y demás para blogs</p>
+        </div>
+    </div>
+    <div class="layout-container">
+        <h1>N2 Layout de dos columnas</h1>
+        <div class="layout-dos">
+            <div class="main">
+                <p>Este es el contenido principal.</p>
+                <p> Se usa para sitios con una barra lateral, como blogs o tiendas en línea.</p>
+            </div>
+            <div class="sidebar">
+                <h2>Barra Lateral</h2>
+                <p>Enlaces y otros contenidos.</p>
+            </div>
+        </div>
+    </div>
+    <div class="layout-container">
+        <h1>N3 Layout de tres columnas</h1>
+        <div class="layout-tres">
+            <div class="sidebar">
+                <h2>Izquierda</h2>
+                <p>Menú o enlaces.</p>
+            </div>
+            <div class="main">
+                <p>Este es el contenido principal.</p>
+            </div>
+            <div class="sidebar">
+                <h2>Derecha</h2>
+                <p>Publicidad o más enlaces.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="layout-container">
+        <h1>N4 Layout Header-Content-Footer</h1>
+        <div class="layout-cuatro">
+            <div class="header">
+                <h1>Encabezado</h1>
+            </div>
+            <div class="content">
+                <p>Este es el contenido principal.</p>
+            </div>
+            <div class="footer">
+                <p>Pie de página</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="layout-header ">
+        N5 Titulo
+    </div>
+    <div class="layout-cinco">
+        <div class="sdebar-cinco">
+            <h2>Menu</h2>
+            <a href="a"> Opcion 1</a>
+            <br>
+            <a href="a"> Opcion 2</a>
+            <br>
+            <a href="a"> Opcion 3</a>
+        </div>
+        <div class="content-cinco">
+            <h1>Titulo 1</h1>
+            <p>este es e layout numero 5 </p>
+        </div>
+    </div>
+    <div class="footer-cinco" >
+        <p>Pie de Pagina</p>
+
+    </div>
+</body>
+</html>
