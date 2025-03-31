@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Producto</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body class="container mt-4">
+    <h1><%= producto.id ? 'Editar Producto' : 'Nuevo Producto' %></h1>
+    <form action="/productos/guardar" method="POST">
+        <input type="hidden" name="id" value="<%= producto.id %>">
+        <div class="mb-3">
+            <label>Nombre</label>
+            <input type="text" name="nombre" class="form-control" required value="<%= producto.nombre %>">
+        </div>
+        <div class="mb-3">
+            <label>Precio</label>
+            <input type="number" name="precio" class="form-control" required step="0.01" value="<%= producto.precio %>">
+        </div>
+        <button type="submit" class="btn btn-success">Guardar</button>
+        <a href="/productos" class="btn btn-secondary">Cancelar</a>
+    </form>
+</body>
+</html>

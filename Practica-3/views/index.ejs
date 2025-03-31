@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ferretería</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body class="container mt-4">
+    <h1 class="mb-3">Lista de Productos de la Ferreteria</h1>
+    <a href="/productos/nuevo" class="btn btn-primary mb-3">Nuevo Producto</a>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% productos.forEach(producto => { %>
+                <tr>
+                    <td><%= producto.id %></td>
+                    <td><%= producto.nombre %></td>
+                    <td>$<%= producto.precio %></td>
+                    <td>
+                        <a href="/productos/editar/<%= producto.id %>" class="btn btn-warning btn-sm">Editar</a>
+                        <a href="/productos/eliminar/<%= producto.id %>" class="btn btn-danger btn-sm" onclick="return confirm('¿Seguro que quieres eliminar?')">Eliminar</a>
+                    </td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+</body>
+</html>
